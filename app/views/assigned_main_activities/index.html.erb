@@ -1,0 +1,19 @@
+<% title "Assigned Main Activities" %>
+
+<table>
+  <tr>
+    <th>Main Activity</th>
+    <th>Garment Number</th>
+  </tr>
+  <% for assigned_main_activity in @assigned_main_activities %>
+    <tr>
+      <td><%= assigned_main_activity.main_activity_id %></td>
+      <td><%= assigned_main_activity.garment_number %></td>
+      <td><%= link_to "Show", assigned_main_activity %></td>
+      <td><%= link_to "Edit", edit_assigned_main_activity_path(assigned_main_activity) %></td>
+      <td><%= link_to "Destroy", assigned_main_activity, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Assigned Main Activity", new_assigned_main_activity_path %></p>

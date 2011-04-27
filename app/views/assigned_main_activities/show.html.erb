@@ -1,0 +1,16 @@
+<% title "Assigned Main Activity" %>
+
+<p>
+  <strong>Main Activity:</strong>
+  <%= @assigned_main_activity.main_activity_id %>
+</p>
+<p>
+  <strong>Garment Number:</strong>
+  <%= @assigned_main_activity.garment_number %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_assigned_main_activity_path(@assigned_main_activity) %> |
+  <%= link_to "Destroy", @assigned_main_activity, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", assigned_main_activities_path %>
+</p>

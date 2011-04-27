@@ -1,0 +1,12 @@
+<%= form_for @assigned_main_activity do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :main_activity_id %><br />
+    <%= f.text_field :main_activity_id %>
+  </p>
+  <p>
+    <%= f.label :garment_number %><br />
+    <%= f.text_field :garment_number %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,20 @@
+<% title "Average" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @average.user_id %>
+</p>
+<p>
+  <strong>Activity:</strong>
+  <%= @average.activity_id %>
+</p>
+<p>
+  <strong>Value:</strong>
+  <%= @average.value %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_average_path(@average) %> |
+  <%= link_to "Destroy", @average, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", averages_path %>
+</p>

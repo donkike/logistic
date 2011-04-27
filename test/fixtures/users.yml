@@ -1,0 +1,11 @@
+one:
+  username: MyString
+  email: MyString
+  password: MyString
+  module_id: 1
+
+two:
+  username: MyString
+  email: MyString
+  password: MyString
+  module_id: 1

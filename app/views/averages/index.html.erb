@@ -1,0 +1,21 @@
+<% title "Averages" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Activity</th>
+    <th>Value</th>
+  </tr>
+  <% for average in @averages %>
+    <tr>
+      <td><%= average.user_id %></td>
+      <td><%= average.activity_id %></td>
+      <td><%= average.value %></td>
+      <td><%= link_to "Show", average %></td>
+      <td><%= link_to "Edit", edit_average_path(average) %></td>
+      <td><%= link_to "Destroy", average, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Average", new_average_path %></p>
