@@ -1,0 +1,21 @@
+<% title "Machines" %>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Name</th>
+    <th>Activity</th>
+  </tr>
+  <% for machine in @machines %>
+    <tr>
+      <td><%= machine.description %></td>
+      <td><%= machine.name %></td>
+      <td><%= machine.activity_id %></td>
+      <td><%= link_to "Show", machine %></td>
+      <td><%= link_to "Edit", edit_machine_path(machine) %></td>
+      <td><%= link_to "Destroy", machine, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Machine", new_machine_path %></p>

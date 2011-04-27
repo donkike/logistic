@@ -1,0 +1,14 @@
+#user_nav {
+    float: right;
+}
+
+.user_information{
+    background-color: #DDDAD6;
+    width: 350px;
+    height:100px;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}

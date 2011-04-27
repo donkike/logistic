@@ -1,0 +1,32 @@
+#user_nav {
+    float: right;
+}
+
+.user_information{
+    background-color: #DDDAD6;
+    width: 180px;
+    height:100px;
+    padding:10px;
+    margin:5px;
+    margin-bottom:10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    float: left;
+}
+
+#small{
+    font-size:18px;
+}
+#users-area{
+    margin-left:5%;
+    width:850px;
+    background-color:#000;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.admin{
+    margin:10px;
+    margin-left: 40%;
+}

@@ -1,0 +1,21 @@
+<% title "Vmodules" %>
+
+<table>
+  <tr>
+    <th>Vmodule Number</th>
+    <th>Vmodule Efficiency</th>
+    <th>User</th>
+  </tr>
+  <% for vmodule in @vmodules %>
+    <tr>
+      <td><%= vmodule.vmodule_number %></td>
+      <td><%= vmodule.vmodule_efficiency %></td>
+      <td><%= vmodule.user_id %></td>
+      <td><%= link_to "Show", vmodule %></td>
+      <td><%= link_to "Edit", edit_vmodule_path(vmodule) %></td>
+      <td><%= link_to "Destroy", vmodule, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Vmodule", new_vmodule_path %></p>

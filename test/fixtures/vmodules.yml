@@ -1,0 +1,9 @@
+one:
+  vmodule_number: 1
+  vmodule_efficiency: 1.5
+  user_id: 1
+
+two:
+  vmodule_number: 1
+  vmodule_efficiency: 1.5
+  user_id: 1

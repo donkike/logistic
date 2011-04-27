@@ -1,0 +1,20 @@
+<% title "Machine" %>
+
+<p>
+  <strong>Description:</strong>
+  <%= @machine.description %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @machine.name %>
+</p>
+<p>
+  <strong>Activity:</strong>
+  <%= @machine.activity_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_machine_path(@machine) %> |
+  <%= link_to "Destroy", @machine, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", machines_path %>
+</p>

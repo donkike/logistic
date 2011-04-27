@@ -1,0 +1,9 @@
+one:
+  user_id: 1
+  activity_id: 1
+  value: 1.5
+
+two:
+  user_id: 1
+  activity_id: 1
+  value: 1.5

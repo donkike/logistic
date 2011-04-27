@@ -1,0 +1,8 @@
+<% title "Edit User" %>
+
+<%= render 'form' %>
+
+<p>
+  <%= link_to "Show", vmodule_user_path(@user.vmodule, @user) %> |
+  <%= link_to "View All", vmodule_path(@user.vmodule) %>
+</p>
