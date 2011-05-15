@@ -11486,3 +11486,43 @@ DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is dep
   [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
 Rendered vmodules/index.html.erb within layouts/application (16.7ms)
 Completed 200 OK in 161ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1" for 127.0.0.1 at Sun May 15 18:33:47 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".vmodule_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_vmodules_show_html_erb__2005994009_2174031880_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/vmodules/show.html.erb:20)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered vmodules/show.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 232ms (Views: 87.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Sun May 15 18:33:52 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 86ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun May 15 18:33:52 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 39ms (Views: 19.9ms | ActiveRecord: 0.0ms)
