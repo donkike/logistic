@@ -11526,3 +11526,48 @@ DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is dep
   Processing by UserSessionsController#new as HTML
 Rendered user_sessions/new.html.erb within layouts/application (11.7ms)
 Completed 200 OK in 39ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Sun May 15 18:43:02 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 125ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Sun May 15 18:43:06 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 397ms
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:43:07 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mVmodule Load (0.3ms)[0m  [1mSELECT "vmodules".* FROM "vmodules"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered vmodules/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 200ms (Views: 80.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:43:40 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.3ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 255ms (Views: 83.1ms | ActiveRecord: 1.1ms)
