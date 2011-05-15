@@ -1,0 +1,39 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+<<<<<<< HEAD
+  #General translations
+  
+  #Messages
+  user_already_exist: "user already exist"
+  successfully_create_user: "successfully create user"
+  unsuccessfully_create_user: "unsuccessfully create user, try in other moment."
+  successfully_destroyed_user: "successfully destroyed user"
+  successfully_updated_user: "successfully updated user"
+  you_havent_started_session: "you haven't started session"
+  successfully_create_user_session: "Welcome"
+  successfully_destroyed_user_session: "see you"
+  are_you_sure?: "are you sure?"
+
+  #Links
+  users: "Users"
+  edit_user: "Edit User"
+  new_user: "New User"
+  show: "show"
+  edit: "Edit"
+  destroy: "Destroy"
+  new_user_session: "new user session"
+  vmodules: "Modules"
+  new_vmodule: "New module"
+  view_all: "View all"
+  submit: "Submit"
+  username: "Username"
+  password: "Password"
+  submit_login: "Login "
+  login: "Admin login"
+  logout: "Logout"
+ 
+=======
+  hello: "Hello world"
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea

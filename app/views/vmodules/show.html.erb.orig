@@ -1,0 +1,29 @@
+<% title "Vmodule" %>
+
+<p>
+  <strong>Vmodule Number:</strong>
+  <%= @vmodule.vmodule_number %>
+</p>
+<p>
+  <strong>Vmodule Efficiency:</strong>
+  <%= @vmodule.vmodule_efficiency %>
+</p>
+<p>
+<<<<<<< HEAD
+<div id= "content-area">
+=======
+<div id= "users-area">
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
+  <table id="table-users">
+    <% for user in @vmodule.users do %>
+      <%= small_user_information user %>
+    <% end %>
+  </table>
+</div>
+
+<% admin_area do %>
+  <%= link_to "Edit", edit_vmodule_path(@vmodule) %> |
+  <%= link_to "Destroy", @vmodule, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to  "Add user", new_vmodule_user_path(@vmodule) %> |
+  <%= link_to "View All", vmodules_path %>
+<% end %>
