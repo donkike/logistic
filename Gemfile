@@ -10,7 +10,7 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 gem 'nifty-generators'
 gem 'activesupport'
 gem "mocha", :group => :test
-
+gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 

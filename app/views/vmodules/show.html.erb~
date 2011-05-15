@@ -9,13 +9,17 @@
   <%= @vmodule.vmodule_efficiency %>
 </p>
 <p>
+<div id= "users-area">
+  <table id="table-users">
+    <% for user in @vmodule.users do %>
+      <%= small_user_information user %>
+    <% end %>
+  </table>
+</div>
 
-  <% for user in @vmodule.users do %>
-    <%= user_information user%>
-  <% end %>
-<p>
+<% admin_area do %>
   <%= link_to "Edit", edit_vmodule_path(@vmodule) %> |
   <%= link_to "Destroy", @vmodule, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to  "Add user", new_vmodule_user_path(@vmodule) %> |
   <%= link_to "View All", vmodules_path %>
-</p>
+<% end %>

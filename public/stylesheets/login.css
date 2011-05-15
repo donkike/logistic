@@ -1,0 +1,10 @@
+#container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border:1px;
+  margin-top: 10%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}

@@ -1,7 +1,7 @@
 module VmodulesHelper
- def user_information user
-   content_tag(:div, :class => "user_information",:id => "user-#{user.username}") do
-      content_tag(:p, "Nombre: #{user.username}") << content_tag(:p, "Correo electronico: #{user.email}")
+  def small_user_information user
+    content_tag(:td,:class => 'user_information', :id => 'small') do
+      content_tag(:div,(link_to user.username, vmodule_user_path(user.vmodule,user)))
     end
   end
 end

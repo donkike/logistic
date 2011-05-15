@@ -1,5 +1,5 @@
 body {
-  background-color:black;
+  background-color:#ccc;
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
 }
@@ -28,7 +28,9 @@ a:hover{
   background-color: #FFF;
   padding: 20px 40px;
   border:1px;
-  margin-top: 20px;
+  margin-top: 10%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
 }
 
 #flash_notice, #flash_error, #flash_alert {

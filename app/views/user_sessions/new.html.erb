@@ -1,16 +1,18 @@
-<% title "New User Session" %>
+<%= stylesheet_link_tag "login" %>
+
+<% title t :new_user_session %>
 
 <%= form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label t(:username) %><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label t(:password) %><br />
     <%= f.password_field :password %>
   </p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit t(:submit_login), :id => "login" %></p>
 <% end %>
 
 

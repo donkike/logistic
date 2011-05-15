@@ -2,7 +2,7 @@
     float: right;
 }
 
-.user_information{
+.small_information{
     background-color: #DDDAD6;
     width: 180px;
     height:100px;
@@ -18,7 +18,7 @@
 #small{
     font-size:18px;
 }
-#users-area{
+#content-area{
     margin-left:5%;
     width:850px;
     background-color:#000;

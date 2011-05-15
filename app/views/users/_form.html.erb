@@ -1,24 +1,20 @@
 <%= form_for [@user.vmodule, @user] do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label t(:username) %><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label t(:email) %><br />
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label t(:password) %><br />
     <%= f.password_field :password %>
   </p>
    <p>
-    <%= f.label :password_confirmation %><br />
+    <%= f.label t(:password_confirmation) %><br />
     <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.label :vmodule_id %><br />
-    <%= f.text_field :vmodule_id %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

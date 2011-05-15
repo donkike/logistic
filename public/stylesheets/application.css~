@@ -1,7 +1,7 @@
 body {
-  background-color:#5D82BA;
+  background-color:black;
   font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 a img {
@@ -9,7 +9,11 @@ a img {
 }
 
 a {
-  color: #0000FF;
+  color: #000;
+}
+
+a:hover{
+    font-weight: bold;
 }
 
 .clear {
@@ -73,3 +77,5 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+
