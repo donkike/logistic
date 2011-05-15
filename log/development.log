@@ -11571,3 +11571,63 @@ DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is dep
   [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
 Rendered vmodules/index.html.erb within layouts/application (76.3ms)
 Completed 200 OK in 255ms (Views: 83.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:47:05 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.3ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 230ms (Views: 77.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:47:29 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.3ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 246ms (Views: 80.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Sun May 15 18:47:39 -0500 2011
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:47:44 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.3ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 132ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 15 18:47:50 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.3ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 130ms (Views: 79.5ms | ActiveRecord: 0.7ms)
