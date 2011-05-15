@@ -9,7 +9,11 @@
   <%= @vmodule.vmodule_efficiency %>
 </p>
 <p>
+<<<<<<< HEAD
+<div id= "content-area">
+=======
 <div id= "users-area">
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
   <table id="table-users">
     <% for user in @vmodule.users do %>
       <%= small_user_information user %>

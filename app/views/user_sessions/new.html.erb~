@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+<%= stylesheet_link_tag "login" %>
+
+<% title t :new_user_session %>
+=======
 <% title "New User Session" %>
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
 
 <%= form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
+<<<<<<< HEAD
+    <%= f.label t(:username) %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label t(:password) %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p><%= f.submit t(:submit_login), :id => "login" %></p>
+=======
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </p>
@@ -11,6 +27,7 @@
     <%= f.password_field :password %>
   </p>
   <p><%= f.submit %></p>
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
 <% end %>
 
 

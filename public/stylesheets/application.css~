@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
+  background-color:#ccc;
+=======
   background-color:black;
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
   font-family: Verdana, Helvetica, Arial;
   font-size: 12px;
 }
@@ -28,7 +32,13 @@ a:hover{
   background-color: #FFF;
   padding: 20px 40px;
   border:1px;
+<<<<<<< HEAD
+  margin-top: 10%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+=======
   margin-top: 20px;
+>>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
 }
 
 #flash_notice, #flash_error, #flash_alert {
