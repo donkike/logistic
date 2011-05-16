@@ -11853,3 +11853,224 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
   [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
 Rendered vmodules/show.html.erb within layouts/application (82.1ms)
 Completed 200 OK in 246ms (Views: 87.6ms | ActiveRecord: 1.3ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateUsers (20110422181455)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "vmodule_id" integer, "average_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110422181455')
+Migrating to CreateUserSessions (20110422183806)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "user_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110422183806')
+Migrating to RemoveModuleIdToUser (20110423052551)
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "vmodule_id" integer, "average_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (1.0ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "vmodule_id" integer, "average_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423052551')[0m
+Migrating to CreateActivities (20110423054913)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "time_activity" float, "average_id" integer, "machine_id" integer, "main_activity_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423054913')[0m
+Migrating to CreateMainActivities (20110423055249)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "main_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "time_main_activity" float, "activity_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423055249')[0m
+Migrating to CreateMachines (20110423060326)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "machines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar(255), "activity_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423060326')[0m
+Migrating to CreateAverages (20110423061031)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "averages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "activity_id" integer, "value" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423061031')[0m
+Migrating to CreateVmodules (20110423160800)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "vmodules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vmodule_number" integer, "vmodule_efficiency" float, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423160800')[0m
+Migrating to CreateAssignedMainActivities (20110423170145)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "assigned_main_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "main_activity_id" integer, "garment_number" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423170145')[0m
+Migrating to AddAssignedMainActivityIdToMainActivity (20110423170310)
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "main_activities" ADD "assigned_main_activity_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110423170310')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("activities")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("assigned_main_activities")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("averages")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("machines")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("main_activities")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_sessions")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("vmodules")
+
+
+Started GET "/vmodules/1" for 127.0.0.1 at Sun May 15 19:10:38 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by VmodulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 128ms
+
+
+Started GET "/login" for 127.0.0.1 at Sun May 15 19:10:39 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 99ms (Views: 80.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Sun May 15 19:10:41 -0500 2011
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/controllers/application_controller.rb:4)
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered user_sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 302ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin_users/new" for 127.0.0.1 at Sun May 15 19:11:03 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin_users/new"):
+  
+
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/admin_users" for 127.0.0.1 at Sun May 15 19:11:09 -0500 2011
+
+ActionController::RoutingError (No route matches "/admin_users"):
+  
+
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Sun May 15 19:11:42 -0500 2011
+
+ActionController::RoutingError (No route matches "/users/new"):
+  
+
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (15.4ms)[0m  [1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "time_activity" float, "average_id" integer, "machine_id" integer, "main_activity_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "assigned_main_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "main_activity_id" integer, "garment_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "averages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "activity_id" integer, "value" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "machines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar(255), "activity_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE TABLE "main_activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "time_main_activity" float, "activity_id" integer, "created_at" datetime, "updated_at" datetime, "assigned_main_activity_id" integer) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (2.8ms)[0m  [1mCREATE TABLE "user_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "vmodule_id" integer, "average_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE TABLE "vmodules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vmodule_number" integer, "vmodule_efficiency" float, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110423170310')
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110422181455')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110422183806')
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110423052551')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110423054913')
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110423055249')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110423060326')
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110423061031')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110423160800')
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110423170145')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110422181455)
+Migrating to CreateUserSessions (20110422183806)
+Migrating to RemoveModuleIdToUser (20110423052551)
+Migrating to CreateActivities (20110423054913)
+Migrating to CreateMainActivities (20110423055249)
+Migrating to CreateMachines (20110423060326)
+Migrating to CreateAverages (20110423061031)
+Migrating to CreateVmodules (20110423160800)
+Migrating to CreateAssignedMainActivities (20110423170145)
+Migrating to AddAssignedMainActivityIdToMainActivity (20110423170310)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("activities")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("assigned_main_activities")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("averages")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("machines")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("main_activities")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_sessions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("vmodules")[0m
