@@ -2,15 +2,13 @@
 db/*.sqlite3
 log/*.log
 tmp/
-<<<<<<< HEAD
 ~*
 *~
 #*
 *#
 schema.rb
 Gemfile.lock
-=======
 *~
 *#
 #*
->>>>>>> 10211c4b4e9c780011f5c892e3aca96e290b8dea
+
