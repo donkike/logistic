@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   def current_user?
     if current_user.nil?
       redirect_to login_path
-      flash[:notice] = :you_havent_started_session
+      flash[:notice] = t(:you_havent_started_session)
     end
   end
 end
