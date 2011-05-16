@@ -3,6 +3,7 @@
 }
 
 .small_information{
+    text-align:center;
     background-color: green/*#DDDAD6*/;
     width: 180px;
     height:100px;
