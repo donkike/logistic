@@ -7,7 +7,7 @@ module VmodulesHelper
     end
   end
   def small_user_information user
-    content_tag(:td,:class => 'small_information', :id => 'small') do
+    content_tag(:td,:class => 'small_information', :id => 'small_user') do
       content_tag(:div,(link_to user.username, vmodule_user_path(user.vmodule,user)))
     end
   end

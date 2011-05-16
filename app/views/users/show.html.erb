@@ -3,7 +3,7 @@
 <%= user_information @user %>
 
 <% admin_area do %>
-  <%= link_to "Edit", edit_vmodule_user_path(@user.vmodule,@user) %> |
-  <%= link_to "Destroy", [@user.vmodule,@user], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", vmodule_path(@user.vmodule) %>
+  <%= link_to t(:edit), edit_vmodule_user_path(@user.vmodule,@user) %> |
+  <%= link_to t(:destroy), [@user.vmodule,@user], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to t(:return_to_module), vmodule_path(@user.vmodule) %>
 <% end %>
