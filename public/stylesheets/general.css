@@ -3,7 +3,7 @@
 }
 
 .small_information{
-    background-color: #DDDAD6;
+    background-color: green/*#DDDAD6*/;
     width: 180px;
     height:100px;
     padding:10px;
@@ -13,6 +13,13 @@
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     float: left;
+}
+
+.main_information{
+    text-align:center;
+    margin:10px;
+    font-size:25px;
+
 }
 
 #small{

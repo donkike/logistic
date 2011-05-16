@@ -1,14 +1,5 @@
-<% title t :vmodules  %>
-
-<p>
-  <strong>Vmodule Number:</strong>
-  <%= @vmodule.vmodule_number %>
-</p>
-<p>
-  <strong>Vmodule Efficiency:</strong>
-  <%= @vmodule.vmodule_efficiency %>
-</p>
-<p>
+<% title [t(:vmodule),@vmodule.vmodule_number.to_s].join("  ") %>
+<%= main_information @vmodule %>
 <div id= "content-area">
   <table id="table-users">
     <% for user in @vmodule.users do %>

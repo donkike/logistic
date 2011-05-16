@@ -1,16 +1,12 @@
 <%= form_for @vmodule do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :vmodule_number %><br />
+    <%= f.label t(:vmodule_number) %><br />
     <%= f.text_field :vmodule_number %>
   </p>
   <p>
-    <%= f.label :vmodule_efficiency %><br />
+    <%= f.label t(:vmodule_efficiency) %><br />
     <%= f.text_field :vmodule_efficiency %>
   </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit t(:submit) %></p>
 <% end %>
