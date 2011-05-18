@@ -27,7 +27,7 @@ en:
   vmodule: "Module"
   new_vmodule: "New module"
   vmodule_number: "Module number"
-  vmodule_efficiency: "Module efficiency:  "
+  vmodule_efficiency: "Compliance:  "
   view_all: "View all"
   submit: "Submit"
   username: "Username"

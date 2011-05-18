@@ -1,6 +1,7 @@
-<% title "User" %>
+<% title "User #{@user.username}" %>
 
 <%= user_information @user %>
+
 
 <% admin_area do %>
   <%= link_to t(:edit), edit_vmodule_user_path(@user.vmodule,@user) %> |

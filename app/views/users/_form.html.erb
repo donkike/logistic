@@ -9,6 +9,14 @@
     <%= f.text_field :email %>
   </p>
   <p>
+    <%= f.label t(:age) %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label t(:user_efficiency) %><br />
+    <%= f.text_field :user_efficiency, :value => 0 %>
+  </p>
+  <p>
     <%= f.label t(:password) %><br />
     <%= f.password_field :password %>
   </p>

@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   belongs_to :vmodule
   has_many :averages
 
-  attr_accessible :username, :email, :password, :password_confirmation, :vmodule_id
+  attr_accessible :username, :email, :password, :password_confirmation, :vmodule_id, :user_efficiency, :age
 end

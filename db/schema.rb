@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110423170310) do
+ActiveRecord::Schema.define(:version => 20110518020036) do
 
   create_table "activities", :force => true do |t|
     t.text     "description"
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20110423170310) do
     t.integer  "average_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "user_efficiency"
+    t.integer  "age"
   end
 
   create_table "vmodules", :force => true do |t|
