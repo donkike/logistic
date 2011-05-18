@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  #before_filter :current_user?
+  before_filter :current_user?
 
   def index
     @vmodule = Vmodule.find(params[:vmodule_id])
