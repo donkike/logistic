@@ -1,12 +1,14 @@
 <% title "Main Activities" %>
 
-<table>
+<table class= "table">
   <tr>
+    <th>Name</th>
     <th>Description</th>
     <th>Time Main Activity</th>
   </tr>
   <% for main_activity in @main_activities %>
     <tr>
+      <th><%= main_activity.name %></th>
       <td><%= main_activity.description %></td>
       <td><%= main_activity.time_main_activity %></td>
       <td><%= link_to "Show", main_activity %></td>

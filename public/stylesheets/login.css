@@ -10,3 +10,11 @@
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
 }
+
+form{
+    margin-left:5%;
+}
+
+.error_messages {
+    margin-left:10%;
+}

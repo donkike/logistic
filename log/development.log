@@ -15858,3 +15858,1081 @@ DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>
   [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
 Rendered vmodules/show.html.erb within layouts/application (194.5ms)
 Completed 200 OK in 209ms (Views: 199.4ms | ActiveRecord: 0.9ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 21:54:52 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2174078600_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (87.5ms)
+Completed 200 OK in 234ms (Views: 94.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:54:56 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (21.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 172ms (Views: 57.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:55:12 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (25.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 92ms (Views: 51.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:55:26 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.1ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (110.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (132.6ms)
+Completed 200 OK in 173ms (Views: 138.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:55:56 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (20.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 154ms (Views: 40.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:56:14 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (21.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 164ms (Views: 124.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:56:38 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (98.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 160ms (Views: 121.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vmodules/1/users/2/edit" for 127.0.0.1 at Tue May 17 21:57:11 -0500 2011
+  Processing by UsersController#edit as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.1ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (21.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/edit.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 176ms (Views: 42.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 21:57:54 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2173705680_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 116ms (Views: 85.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1" for 127.0.0.1 at Tue May 17 21:57:57 -0500 2011
+  Processing by VmodulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mVmodule Load (0.1ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".vmodule_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_vmodules_show_html_erb__2005994009_2173462940_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/vmodules/show.html.erb:11)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered vmodules/show.html.erb within layouts/application (181.8ms)
+Completed 200 OK in 196ms (Views: 187.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 21:58:01 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[36mVmodule Load (0.6ms)[0m  [1mSELECT "vmodules".* FROM "vmodules"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered vmodules/index.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 128ms (Views: 120.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vmodules/1" for 127.0.0.1 at Tue May 17 21:58:05 -0500 2011
+  Processing by VmodulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users".vmodule_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_vmodules_show_html_erb__2005994009_2173695940_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/vmodules/show.html.erb:11)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/show.html.erb within layouts/application (124.7ms)
+Completed 200 OK in 146ms (Views: 129.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 21:58:08 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.6ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (128.6ms)
+Completed 200 OK in 144ms (Views: 134.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:00:10 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.6ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (102.4ms)
+Completed 200 OK in 118ms (Views: 107.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:00:53 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.6ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (186.3ms)
+Completed 200 OK in 200ms (Views: 191.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities/new" for 127.0.0.1 at Tue May 17 22:00:55 -0500 2011
+  Processing by MainActivitiesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered main_activities/_form.html.erb (68.9ms)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/new.html.erb within layouts/application (96.1ms)
+Completed 200 OK in 279ms (Views: 140.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/main_activities" for 127.0.0.1 at Tue May 17 22:01:25 -0500 2011
+  Processing by MainActivitiesController#create as HTML
+  Parameters: {"commit"=>"Create Main activity", "main_activity"=>{"time_main_activity"=>"50", "description"=>"Make something."}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "main_activities" ("time_main_activity", "assigned_main_activity_id", "created_at", "description", "updated_at", "activity_id") VALUES (50.0, NULL, '2011-05-18 03:01:25.555427', 'Make something.', '2011-05-18 03:01:25.555427', NULL)[0m
+Redirected to http://localhost:3000/main_activities/1
+Completed 302 Found in 143ms
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:01:25 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.3ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.2ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2174585820_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:17)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 191ms (Views: 84.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/main_activities/1/activities/new" for 127.0.0.1 at Tue May 17 22:01:33 -0500 2011
+  Processing by ActivitiesController#new as HTML
+  Parameters: {"main_activity_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+Rendered activities/_form.html.erb (4.4ms)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered activities/new.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 238ms (Views: 99.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/main_activities/1/activities" for 127.0.0.1 at Tue May 17 22:01:55 -0500 2011
+  Processing by ActivitiesController#create as HTML
+  Parameters: {"commit"=>"Create Activity", "activity"=>{"time_activity"=>"5", "description"=>"This is a little activity."}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓", "main_activity_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.3ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "activities" ("main_activity_id", "average_id", "description", "updated_at", "created_at", "time_activity", "machine_id") VALUES (1, NULL, 'This is a little activity.', '2011-05-18 03:01:55.356165', '2011-05-18 03:01:55.356165', 5.0, NULL)
+Redirected to http://localhost:3000/main_activities/1
+Completed 302 Found in 171ms
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:01:55 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2172925300_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:17)
+  [1m[36mVmodule Load (0.3ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/show.html.erb within layouts/application (188.5ms)
+Completed 200 OK in 243ms (Views: 194.8ms | ActiveRecord: 1.8ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateUsers (20110422181455)
+Migrating to CreateUserSessions (20110422183806)
+Migrating to RemoveModuleIdToUser (20110423052551)
+Migrating to CreateActivities (20110423054913)
+Migrating to CreateMainActivities (20110423055249)
+Migrating to CreateMachines (20110423060326)
+Migrating to CreateAverages (20110423061031)
+Migrating to CreateVmodules (20110423160800)
+Migrating to CreateAssignedMainActivities (20110423170145)
+Migrating to AddAssignedMainActivityIdToMainActivity (20110423170310)
+Migrating to AddUserEfficiencyToUser (20110518014010)
+Migrating to AddAgeToUser (20110518020036)
+Migrating to AddNameToMainActivity (20110518030315)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "main_activities" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110518030315')
+Migrating to AddNameToActivity (20110518030332)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "activities" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110518030332')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("activities")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("assigned_main_activities")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("averages")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("machines")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("main_activities")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_sessions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("vmodules")[0m
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:06:10 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.7ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2175061940_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:22)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (112.9ms)
+Completed 200 OK in 319ms (Views: 118.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/main_activities/1/edit" for 127.0.0.1 at Tue May 17 22:06:13 -0500 2011
+  Processing by MainActivitiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.3ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+Rendered main_activities/_form.html.erb (68.5ms)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/edit.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 165ms (Views: 117.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities/1/edit" for 127.0.0.1 at Tue May 17 22:06:43 -0500 2011
+  Processing by MainActivitiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+Rendered main_activities/_form.html.erb (18.2ms)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/edit.html.erb within layouts/application (92.0ms)
+Completed 200 OK in 212ms (Views: 98.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/main_activities/1" for 127.0.0.1 at Tue May 17 22:06:51 -0500 2011
+  Processing by MainActivitiesController#update as HTML
+  Parameters: {"commit"=>"Update Main activity", "main_activity"=>{"name"=>"First activity", "time_main_activity"=>"50.0", "description"=>"Make something."}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "main_activities" SET "name" = 'First activity', "updated_at" = '2011-05-18 03:06:51.361477' WHERE "main_activities"."id" = 1
+Redirected to http://localhost:3000/main_activities/1
+Completed 302 Found in 141ms
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:06:51 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173470460_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:22)
+  [1m[36mVmodule Load (0.3ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/show.html.erb within layouts/application (187.6ms)
+Completed 200 OK in 295ms (Views: 192.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:07:23 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2174349880_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (150.5ms)
+Completed 200 OK in 345ms (Views: 157.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:07:53 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+ERROR: compiling _app_views_main_activities_show_html_erb__1954399330_2174121400_0 RAISED compile error
+/Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:17: syntax error, unexpected '|'
+...@main_activity.activities do |i| 
+                              ^
+Function body:           def _app_views_main_activities_show_html_erb__1954399330_2174121400_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "main_activities/show";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title "Main Activity" 
+@output_buffer.safe_concat('
+<p>
+  <strong>Name:</strong>
+  ');@output_buffer.append= ( @main_activity.name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Description:</strong>
+  ');@output_buffer.append= ( @main_activity.description );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+<p>
+  <strong>Time Main Activity:</strong>
+  ');@output_buffer.append= ( @main_activity.time_main_activity );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</p>
+
+  <strong>Activities:</strong>
+');@output_buffer.append_if_string=    for activity in @main_activity.activities do |i| 
+@output_buffer.safe_concat('    <p>');@output_buffer.append= ( activity.name );@output_buffer.safe_concat('</p>
+    <p>');@output_buffer.append= ( activity.description);@output_buffer.safe_concat('</p>
+');   end 
+@output_buffer.safe_concat('
+
+');@output_buffer.append_if_string=  admin_area do 
+@output_buffer.safe_concat('  ');@output_buffer.append= ( link_to "Edit", edit_main_activity_path(@main_activity) );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "Destroy", @main_activity, :confirm => 'Are you sure?', :method => :delete );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "Add activities", new_main_activity_activity_path(@main_activity) );@output_buffer.safe_concat(' |
+  ');@output_buffer.append= ( link_to "View All", main_activities_path );@output_buffer.safe_concat('
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:32:in `compile'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:446:in `_run__1089180941__process_action__453433196__callbacks'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:110:in `optimized_each'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/lock.rb:11:in `synchronize'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/content_length.rb:13:in `call'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/handler/webrick.rb:52:in `service'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/dmuneras/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/handler/webrick.rb:13:in `run'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/commands.rb:30
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered main_activities/show.html.erb within layouts/application (3.5ms)
+Completed   in 125ms
+
+ActionView::Template::Error (compile error
+/Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:17: syntax error, unexpected '|'
+...@main_activity.activities do |i| 
+                              ^):
+    14: </p>
+    15: 
+    16:   <strong>Activities:</strong>
+    17:   <% for activity in @main_activity.activities do |i| %>
+    18:     <p><%= activity.name %></p>
+    19:     <p><%= activity.description%></p>
+    20:   <% end %>
+  app/views/main_activities/show.html.erb:32:in `compile'
+
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.4ms)
+Rendered /Users/dmuneras/.rvm/gems/ruby-1.8.7-p334/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.5ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:08:05 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2175247100_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[35mVmodule Load (0.9ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (101.5ms)
+Completed 200 OK in 220ms (Views: 107.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:09:01 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173648800_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/show.html.erb within layouts/application (164.1ms)
+Completed 200 OK in 290ms (Views: 169.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:09:14 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173573080_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (165.2ms)
+Completed 200 OK in 288ms (Views: 172.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:09:32 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173379080_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/show.html.erb within layouts/application (120.7ms)
+Completed 200 OK in 246ms (Views: 126.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:09:49 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.3ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2174119760_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 249ms (Views: 110.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:09:58 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 179ms (Views: 133.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:10:53 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 337ms (Views: 81.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:11:23 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 196ms (Views: 83.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:14:42 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 257ms (Views: 86.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:14:53 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.3ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 193ms (Views: 83.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:15:05 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.3ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 208ms (Views: 89.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:15:14 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (1.6ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 215ms (Views: 88.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:15:44 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (103.4ms)
+Completed 200 OK in 243ms (Views: 109.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:16:34 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 230ms (Views: 87.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities/1/edit" for 127.0.0.1 at Tue May 17 22:16:58 -0500 2011
+  Processing by MainActivitiesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+Rendered main_activities/_form.html.erb (67.6ms)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/edit.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 206ms (Views: 101.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/main_activities/1" for 127.0.0.1 at Tue May 17 22:17:12 -0500 2011
+  Processing by MainActivitiesController#update as HTML
+  Parameters: {"commit"=>"Update Main activity", "main_activity"=>{"name"=>"First activity", "time_main_activity"=>"50.0", "description"=>"Make something.............more information about the process"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.3ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.7ms)[0m  UPDATE "main_activities" SET "updated_at" = '2011-05-18 03:17:12.531354', "description" = 'Make something.............more information about the process' WHERE "main_activities"."id" = 1
+Redirected to http://localhost:3000/main_activities/1
+Completed 302 Found in 126ms
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:17:12 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1[0m
+  [1m[35mActivity Load (0.3ms)[0m  SELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173811180_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/show.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 263ms (Views: 118.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:17:16 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.3ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.3ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 148ms (Views: 41.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:19:29 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 267ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:19:47 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 133ms (Views: 32.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:20:08 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 139ms (Views: 37.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 22:20:33 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2172660040_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 140ms (Views: 110.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/main_activities/new" for 127.0.0.1 at Tue May 17 22:20:35 -0500 2011
+  Processing by MainActivitiesController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered main_activities/_form.html.erb (101.7ms)
+  [1m[35mVmodule Load (0.6ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/new.html.erb within layouts/application (126.8ms)
+Completed 200 OK in 583ms (Views: 474.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 22:20:38 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2173533860_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 157ms (Views: 35.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 22:21:30 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[36mVmodule Load (0.1ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2173457640_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 129ms (Views: 99.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:21:33 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mMainActivity Load (0.2ms)[0m  [1mSELECT "main_activities".* FROM "main_activities"[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 187ms (Views: 84.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 22:21:45 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[36mVmodule Load (0.1ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2175213240_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 121ms (Views: 92.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vmodules/1" for 127.0.0.1 at Tue May 17 22:21:49 -0500 2011
+  Processing by VmodulesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users".vmodule_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_vmodules_show_html_erb__2005994009_2174604440_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/vmodules/show.html.erb:11)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/show.html.erb within layouts/application (119.2ms)
+Completed 200 OK in 192ms (Views: 124.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:22:00 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.5ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (182.5ms)
+Completed 200 OK in 197ms (Views: 188.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:22:44 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.5ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (225.9ms)
+Completed 200 OK in 241ms (Views: 230.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:22:46 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.5ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (117.5ms)
+Completed 200 OK in 131ms (Views: 123.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:22:48 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.2ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 131ms (Views: 33.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vmodules/1/users/2" for 127.0.0.1 at Tue May 17 22:22:50 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"2"}
+  [1m[35mVmodule Load (0.1ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2172527820_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 140ms (Views: 105.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Tue May 17 22:22:53 -0500 2011
+  Processing by UserSessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = 'c5ec7ca4e941e98664dea919ce0c6cd12751bcdd5ce74f1db04ac66cf1b4b5fbdd0198b5c8dabf818d0b60a36193068ede6217d57fedcf04ae4e0d32b70591a4' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 93ms
+
+
+Started GET "/login" for 127.0.0.1 at Tue May 17 22:22:53 -0500 2011
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 35ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Tue May 17 22:23:35 -0500 2011
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 32ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at Tue May 17 22:23:45 -0500 2011
+  Processing by UserSessionsController#new as HTML
+Rendered user_sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 114ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:23:53 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1
+Rendered user_sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 279ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:24:45 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 191ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:25:06 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1
+Rendered user_sessions/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 63ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:25:20 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1[0m
+Rendered user_sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 74ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:25:29 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"dmuneras", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'dmuneras') LIMIT 1
+Rendered user_sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 47ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at Tue May 17 22:25:41 -0500 2011
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"commit"=>"Login ", "user_session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "authenticity_token"=>"rvSYtaa5oUjG6vGTMCsrC9ACHnwvrWEUmDnKf6hqjWM=", "utf8"=>"✓"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE (LOWER("users".username) = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 184ms
+
+
+Started GET "/" for 127.0.0.1 at Tue May 17 22:25:41 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[35mVmodule Load (0.7ms)[0m  SELECT "vmodules".* FROM "vmodules"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered vmodules/index.html.erb within layouts/application (201.3ms)
+Completed 200 OK in 215ms (Views: 206.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/vmodules/1/users/1" for 127.0.0.1 at Tue May 17 22:25:48 -0500 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"vmodule_id"=>"1", "id"=>"1"}
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 AND ("users".vmodule_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_show_html_erb__133402987_2171947020_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/users/show.html.erb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 166ms (Views: 124.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/main_activities" for 127.0.0.1 at Tue May 17 22:25:49 -0500 2011
+  Processing by MainActivitiesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.3ms)[0m  SELECT "main_activities".* FROM "main_activities"
+  [1m[36mVmodule Load (0.2ms)[0m  [1mSELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1[0m
+Rendered main_activities/index.html.erb within layouts/application (94.3ms)
+Completed 200 OK in 227ms (Views: 100.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/main_activities/1" for 127.0.0.1 at Tue May 17 22:25:55 -0500 2011
+  Processing by MainActivitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mMainActivity Load (0.3ms)[0m  SELECT "main_activities".* FROM "main_activities" WHERE "main_activities"."id" = 1 LIMIT 1
+  [1m[36mActivity Load (0.6ms)[0m  [1mSELECT "activities".* FROM "activities" WHERE ("activities".main_activity_id = 1)[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_main_activities_show_html_erb__1954399330_2173137300_0 at /Users/dmuneras/Documents/ProyectoUbicuidadP50/Application/logistic/app/views/main_activities/show.html.erb:23)
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered main_activities/show.html.erb within layouts/application (187.3ms)
+Completed 200 OK in 322ms (Views: 192.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vmodules" for 127.0.0.1 at Tue May 17 22:26:04 -0500 2011
+  Processing by VmodulesController#index as HTML
+  [1m[36mVmodule Load (0.5ms)[0m  [1mSELECT "vmodules".* FROM "vmodules"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mVmodule Load (0.2ms)[0m  SELECT "vmodules".* FROM "vmodules" WHERE "vmodules"."id" = 1 LIMIT 1
+Rendered vmodules/index.html.erb within layouts/application (126.8ms)
+Completed 200 OK in 140ms (Views: 132.1ms | ActiveRecord: 1.0ms)

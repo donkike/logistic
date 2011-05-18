@@ -1,6 +1,10 @@
 <% title "Main Activity" %>
 
 <p>
+  <strong>Name:</strong>
+  <%= @main_activity.name %>
+</p>
+<p>
   <strong>Description:</strong>
   <%= @main_activity.description %>
 </p>
@@ -9,7 +13,9 @@
   <%= @main_activity.time_main_activity %>
 </p>
 
+  <strong>Activities:</strong>
   <% for activity in @main_activity.activities do %>
+    <p><%= activity.name %></p>
     <p><%= activity.description%></p>
   <% end %>
 

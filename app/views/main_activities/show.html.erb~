@@ -9,8 +9,14 @@
   <%= @main_activity.time_main_activity %>
 </p>
 
-<p>
+  <% for activity in @main_activity.activities do %>
+    <p><%= activity.description%></p>
+  <% end %>
+
+
+<% admin_area do %>
   <%= link_to "Edit", edit_main_activity_path(@main_activity) %> |
   <%= link_to "Destroy", @main_activity, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Add activities", new_main_activity_activity_path(@main_activity) %> |
   <%= link_to "View All", main_activities_path %>
-</p>
+<% end %>
