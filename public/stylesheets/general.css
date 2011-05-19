@@ -3,7 +3,7 @@
 }
 
 .small_information{
-    text-align:center;
+  
     width: 180px;
     height:100px;
     padding:10px;
@@ -44,41 +44,85 @@
     margin-right:50px;
 }
 
-#small_user-red a{
-    font-size: 20px;
+/*DIV-LINK USING BACKGROUND-IMAGE AND SPAN TO SHOW OTHER INFORMATION*/
+#small_user-red {
+     background-image: url('/images/rojo.jpg'); 
 }
 
-#small_user-green a{
-    font-size: 20px;
+#small_user-red span {
+    position:absolute;
+    font-size: 14px;
+}
+#small_user-red img {
+    width: 180px;
+    height:100px;
+}
+
+#small_user-red a{
+    text-decoration:none;
+    font-size:30px;
 }
 
 #small_user-green {
-    background-color: green/*#DDDAD6*/;
-   
+     background-image: url('/images/verde.jpg');   
 }
 
-#small_user-red {
-    background-color: red;
-   
+#small_user-green span {
+    position:absolute;
+    font-size: 14x;
 }
+
+
+#small_user-green img {
+    width: 180px;
+    height:100px;
+}
+
+#small_user-green a{
+    text-decoration:none;
+    font-size:30px;
+}
+
+
 
 #small-green {
-    background-color: green/*#DDDAD6*/;
-   
+     background-image: url('/images/verde.jpg'); 
 }
-#small-green a {
+
+#small-green span{
+    position:absolute;
     font-size:60px;
+    margin-left: 60px;
+}
+
+#small-green a {
+    text-decoration:none;
+}
+#small-green img {
+    width: 180px;
+    height:100px;
 }
 
 #small-red {
-    background-color: red;
+    background-image: url('/images/rojo.jpg');
    
 }
-#small-red a {
+
+#small-red span{
+    position:absolute;
     font-size:60px;
+    margin-left: 60px;
+    
+}
+#small-red a {
+    text-decoration:none;
+}
+#small-red img {
+  width:180px;
+  height:100px
 }
 
-
+/*DIV CONTENT TO INFORMATION*/
 #content-area{
     margin-left:5%;
     width:850px;
@@ -87,6 +131,7 @@
     -moz-border-radius: 15px;
 }
 
+/*STYLE TO USER NAV*/
 .admin{
     margin:10px;
     margin-left: 40%;
