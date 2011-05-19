@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518030332) do
+ActiveRecord::Schema.define(:version => 20110519050338) do
 
   create_table "activities", :force => true do |t|
     t.text     "description"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20110518030332) do
     t.datetime "updated_at"
     t.float    "user_efficiency"
     t.integer  "age"
+    t.boolean  "admin"
   end
 
   create_table "vmodules", :force => true do |t|

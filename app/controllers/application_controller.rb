@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :current_user
-
+  helper_method :admin?
   private
 
   def current_user_session
@@ -21,6 +21,17 @@ class ApplicationController < ActionController::Base
     if current_user.nil?
       redirect_to login_path
       flash[:notice] = t(:you_havent_started_session)
+    end
+  end
+
+  def admin?
+    current_user.admin
+  end
+
+  def is_admin?
+    unless admin?
+      redirect_to vmodule_path(current_user.vmodule)
+      flash[:notice] = t(:you_arent_admin)
     end
   end
 end

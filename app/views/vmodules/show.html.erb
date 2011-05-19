@@ -8,9 +8,11 @@
   </table>
 </div>
 
-<% admin_area do %>
-  <%= link_to t(:edit), edit_vmodule_path(@vmodule) %> |
-  <%= link_to t(:destroy), @vmodule, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to t(:add_user), new_vmodule_user_path(@vmodule) %> |
-  <%= link_to t(:view_all_modules), vmodules_path %>
+<% if admin? %>
+  <% admin_area do %>
+    <%= link_to t(:edit), edit_vmodule_path(@vmodule) %> |
+    <%= link_to t(:destroy), @vmodule, :confirm => 'Are you sure?', :method => :delete %> |
+    <%= link_to t(:add_user), new_vmodule_user_path(@vmodule) %> |
+    <%= link_to t(:view_all_modules), vmodules_path %>
+  <% end %>
 <% end %>

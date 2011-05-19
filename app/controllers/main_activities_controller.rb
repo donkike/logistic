@@ -1,6 +1,6 @@
 class MainActivitiesController < ApplicationController
   before_filter :current_user?
-
+  before_filter :is_admin?, :only => :index
   def index
     @main_activities = MainActivity.all
   end

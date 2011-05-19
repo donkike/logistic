@@ -6,7 +6,11 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      redirect_to root_url, :notice => t(:successfully_create_user_session)
+      if admin?
+        redirect_to root_url, :notice => t(:successfully_create_user_session)
+      else
+        redirect_to vmodule_path(current_user.vmodule), :notice => t(:successfully_create_user_session)
+      end
     else
       render :action => 'new'
     end

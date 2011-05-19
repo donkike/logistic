@@ -14,6 +14,7 @@ en:
   successfully_create_user_session: "Welcome"
   successfully_destroyed_user_session: "see you"
   are_you_sure?: "are you sure?"
+  you_arent_admin: "you are not admin"
 
   #Links
   users: "Users"

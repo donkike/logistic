@@ -1,5 +1,6 @@
 class VmodulesController < ApplicationController
   before_filter :current_user?
+  before_filter :is_admin?, :only => :index
   def index
     @vmodules = Vmodule.all
   end

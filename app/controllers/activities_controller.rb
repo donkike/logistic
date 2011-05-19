@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 
   before_filter :current_user?
-
+  before_filter :is_admin?, :only => :index
   def index
     @main_activity = MainActivity.find(params[:main_activity_id])
     @activities = Activity.all
