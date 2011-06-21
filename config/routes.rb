@@ -6,6 +6,7 @@ Logistic::Application.routes.draw do
   match '/logout',:to => 'user_sessions#destroy'
   resources :user_sessions
 
+  
   resources :vmodules do 
     resources :users    
   end
@@ -18,6 +19,12 @@ Logistic::Application.routes.draw do
   resources :averages
   resources :machines
   resources :assigned_main_activities
+
+  resources :vmodules do
+    member do
+      get 'update_span'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

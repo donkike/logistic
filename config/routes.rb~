@@ -1,18 +1,23 @@
 Logistic::Application.routes.draw do
  
+  resources :report_activity_users
+
   match '/login', :to => 'user_sessions#new'
   match '/logout',:to => 'user_sessions#destroy'
   resources :user_sessions
-  resources :users
-  resources :vmodules
-  resources :averages
-  resources :machines
-  resources :assigned_main_activities
+
+  resources :vmodules do 
+    resources :users    
+  end
 
   resources :main_activities do 
     resources :activities
   end   
   
+  
+  resources :averages
+  resources :machines
+  resources :assigned_main_activities
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

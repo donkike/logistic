@@ -40,4 +40,9 @@ class VmodulesController < ApplicationController
     @vmodule.destroy
     redirect_to vmodules_url, :notice => "Successfully destroyed vmodule."
   end
+
+  def update_span
+    @vmodule = Vmodule.find(params[:id])
+    render :layout => false
+  end
 end
