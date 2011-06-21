@@ -23,6 +23,7 @@ Logistic::Application.routes.draw do
   resources :vmodules do
     member do
       get 'update_span'
+      get 'update_worker'
     end
   end
 

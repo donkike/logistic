@@ -16,7 +16,7 @@ module VmodulesHelper
     else
       content_tag(:td,:class => 'small_information', :id => "small_user-green") do
         content_tag(:span, (link_to user.username, vmodule_user_path(user.vmodule,user))) <<
-        content_tag(:div,(link_to image_tag('verde.jpg'), vmodule_user_path(user.vmodule,user))) 
+          content_tag(:div,(link_to image_tag('verde.jpg'), vmodule_user_path(user.vmodule,user))) 
       end
     end
   end

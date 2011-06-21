@@ -45,4 +45,9 @@ class VmodulesController < ApplicationController
     @vmodule = Vmodule.find(params[:id])
     render :layout => false
   end
+
+  def update_worker
+    @vmodule = Vmodule.find(params[:id])
+    render :layout =>false
+  end
 end
