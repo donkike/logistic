@@ -1,0 +1,21 @@
+<% title "Report Activity Users" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Activity</th>
+    <th>Real Time</th>
+  </tr>
+  <% for report_activity_user in @report_activity_users %>
+    <tr>
+      <td><%= report_activity_user.user_id %></td>
+      <td><%= report_activity_user.activity_id %></td>
+      <td><%= report_activity_user.real_time %></td>
+      <td><%= link_to "Show", report_activity_user %></td>
+      <td><%= link_to "Edit", edit_report_activity_user_path(report_activity_user) %></td>
+      <td><%= link_to "Destroy", report_activity_user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Report Activity User", new_report_activity_user_path %></p>

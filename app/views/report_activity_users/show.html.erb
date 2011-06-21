@@ -1,0 +1,20 @@
+<% title "Report Activity User" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @report_activity_user.user_id %>
+</p>
+<p>
+  <strong>Activity:</strong>
+  <%= @report_activity_user.activity_id %>
+</p>
+<p>
+  <strong>Real Time:</strong>
+  <%= @report_activity_user.real_time %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_report_activity_user_path(@report_activity_user) %> |
+  <%= link_to "Destroy", @report_activity_user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", report_activity_users_path %>
+</p>

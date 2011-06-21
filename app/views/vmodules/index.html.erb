@@ -1,9 +1,11 @@
 <% title t :vmodules %>
+
 <div class= "content-area">
   <table id="table-users">
     <% for vmodule in @vmodules %>
-      <%= small_module_information vmodule %>
+      <%= render :partial =>"small_information", :locals => {:vmodule => vmodule} %>
     <% end %>
   </table>
 </div>
 <p><%= link_to t(:new_vmodule), new_vmodule_path %></p>
+

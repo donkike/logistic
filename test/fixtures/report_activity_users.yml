@@ -1,0 +1,9 @@
+one:
+  user_id: 1
+  activity_id: 1
+  real_time: 1
+
+two:
+  user_id: 1
+  activity_id: 1
+  real_time: 1

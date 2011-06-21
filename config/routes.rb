@@ -1,5 +1,7 @@
 Logistic::Application.routes.draw do
  
+  resources :report_activity_users
+
   match '/login', :to => 'user_sessions#new'
   match '/logout',:to => 'user_sessions#destroy'
   resources :user_sessions

@@ -1,0 +1,16 @@
+<%= form_for @report_activity_user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :activity_id %><br />
+    <%= f.text_field :activity_id %>
+  </p>
+  <p>
+    <%= f.label :real_time %><br />
+    <%= f.text_field :real_time %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
