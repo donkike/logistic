@@ -1,1 +1,3 @@
-<%=  @vmodule.vmodule_efficiency %>
+ <% for vmodule in @vmodules %>
+      <%= render :partial =>"small_information", :locals => {:vmodule => vmodule} %>
+ <% end %>

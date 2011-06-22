@@ -42,7 +42,7 @@ class VmodulesController < ApplicationController
   end
 
   def update_span
-    @vmodule = Vmodule.find(params[:id])
+    @vmodules = Vmodule.all
     render :layout => false
   end
 

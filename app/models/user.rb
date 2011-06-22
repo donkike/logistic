@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     reports = ReportActivityUser.find(:all,:conditions => {:user_id => self.id})
     unless reports.nil?
       den =0
-      num =0
+      num =1
       for report in reports do 
         den += report.activity.time_activity
         num += report.real_time

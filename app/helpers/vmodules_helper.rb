@@ -8,7 +8,7 @@ module VmodulesHelper
   end
 
   def small_user_information user
-    if user.user_efficiency < 0.9
+    if user.compliance.to_f < 0.9
       content_tag(:td,:class => 'small_information', :id => "small_user-red") do
         content_tag(:span,(link_to "#{user.username}(#{user.compliance})", vmodule_user_path(user.vmodule,user))) <<
           content_tag(:div,(link_to image_tag('rojo.jpg'), vmodule_user_path(user.vmodule,user))) 
@@ -22,7 +22,7 @@ module VmodulesHelper
   end
 
   def small_module_information vmodule
-    if vmodule.vmodule_efficiency < 0.9
+    if vmodule.compliance < 0.9
        content_tag(:td,:class => 'small_information', :id => "small-red") do
         content_tag(:span,(link_to vmodule.vmodule_number, vmodule_path(vmodule),:id => "numberdb")) <<
         content_tag(:div,(link_to image_tag('rojo.jpg'), vmodule_path(vmodule))) 

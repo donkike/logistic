@@ -20,7 +20,7 @@ function objetoAjax(){
 
 function actualizar(){
 
-	divResultado = document.getElementById('numberdb');
+	divResultado = document.getElementById('all-modules');
         if(divResultado != null){
 	    ajax=objetoAjax();
             ajax.open("GET", "/vmodules/1/update_span");
@@ -40,24 +40,3 @@ function actualizar(){
 }
 setTimeout("actualizar()",1000);
 
-function actualizarUsers(){
-
-	divResultado = document.getElementById('table-users');
-	ajax=objetoAjax();
-        if (divResultado != null){
-            ajax.open("GET", "/vmodules/1/update_worker");
-	    ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-		    //mostrar resultados en esta capa
-		    divResultado.innerHTML = ajax.responseText
-		    //llamar a funcion para limpiar los inputs
-		}
-		
-	    }
-	    //enviando los valores
-	    ajax.send(null);
-            setTimeout("actualizarUsers()",1000);
-	}
-    
-}
-setTimeout("actualizarUsers()",1000);
