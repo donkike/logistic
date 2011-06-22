@@ -14,7 +14,11 @@ class ReportActivityUsersController < ApplicationController
   def create
     @report_activity_user = ReportActivityUser.new(params[:report_activity_user])
     if @report_activity_user.save
-      redirect_to @report_activity_user, :notice => "Successfully created report activity user."
+      #redirect_to @report_activity_user, :notice => "Successfully created report activity user."
+      respond_to do |format|
+        #format.html redirect_to(@report_activity_user, :notice => "Successfully created report activity user.") 
+        format.xml { render :xml => @report_activity_user.to_xml }
+      end
     else
       render :action => 'new'
     end
@@ -27,7 +31,11 @@ class ReportActivityUsersController < ApplicationController
   def update
     @report_activity_user = ReportActivityUser.find(params[:id])
     if @report_activity_user.update_attributes(params[:report_activity_user])
-      redirect_to @report_activity_user, :notice  => "Successfully updated report activity user."
+      #redirect_to @report_activity_user, :notice  => "Successfully updated report activity user."
+      respond_to do |format|
+        #format.html redirect_to(@report_activity_user, :notice => "Successfully created report activity user.") 
+        format.xml { render :xml => @report_activity_user.to_xml }
+      end
     else
       render :action => 'edit'
     end
